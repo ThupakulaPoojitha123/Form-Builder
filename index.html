@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form id="registrationForm">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date">
+        </div>
+
+        <!-- Dynamic Fields Appear Here -->
+        <div id="dynamicFields"></div>
+
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+
+    <hr>
+
+    <h3>Add Custom Field</h3>
+    <input type="text" id="fieldLabel" placeholder="Field Label">
+    <select id="fieldType">
+        <option value="text">Text</option>
+        <option value="email">Email</option>
+        <option value="number">Number</option>
+    </select>
+    <button onclick="addField()">Add Field</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
